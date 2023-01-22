@@ -1,18 +1,16 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macros %}
 
-{% block title %} 
+{% block title %}
     {{ super() }}
-    Bienvenido 
+    Bienvenido
 {% endblock %}
 
 {% block content %}
     {% if user_ip %}
-    <h1>
-        Hello, tu ip es {{ user_ip }}
-    </h1>
+        <h1>Hello World Platzi, tu IP es {{ user_ip }}</h1>
     {% else %}
-        <a href="{{ url_for('index') }}">ir a inicio</a>
+        <a href="{{ url_for('index') }}">Ir a inicio</a>
     {% endif %}
 
     <ul>
